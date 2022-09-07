@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<!-- Main Root -->
 <html lang="en">
+<!-- Document metadata -->
 
 <head>
     <meta charset="utf-8" />
@@ -21,8 +23,10 @@
         }
     </style>
 </head>
+<!-- Sectioning root -->
 
 <body>
+    <!-- Content sectioning -->
     <header>
         <h1>Header</h1>
     </header>
@@ -40,6 +44,7 @@
         <article>
             <section>
                 <h2>First Article</h2>
+                <!-- Text Content -->
                 <p>The first <strong>paragraph</strong></p>
                 <aside>First Aside, indirectly related</aside>
                 <p>The second <strong>paragraph</strong></p>
@@ -53,6 +58,182 @@
             <p>The first <strong>paragraph</strong></p>
             <aside>First Aside, indirectly related</aside>
             <p>The second <strong>paragraph is located <a href="#">here</a></strong></p>
+            <figure>
+                <blockquote cite="site or somewhere">
+                    <p>Nothing is impossible.</p>
+                </blockquote>
+                <figcaption>-Someone, <cite>2019</cite></figcaption>
+            </figure>
+        </article>
+        <article>
+            <h2>Third Article</h2>
+            <section>
+                <p>Main Description</p>
+                <dl>
+                    <dt>Sub Description Title 1</dt>
+                    <dd>Describes sub description 1</dd>
+                    <dt>Sub Description Title 2</dt>
+                    <dd>Describes sub description 2</dd>
+                </dl>
+            </section>
+            <section>
+                <h3>Block</h3>
+                <!-- menu is same as ul -->
+                <menu>
+                    <li>menu List 1</li>
+                    <li>menu List 2</li>
+                </menu>
+                <ul>
+                    <li>ul List 1</li>
+                    <li>ul List 2</li>
+                </ul>
+                <!-- text inside pre is displayed as is-->
+                <pre>aaaa aaa aaaaaaaaa            aaa</pre>
+                <!-- menu is same as ul -->
+                <p>
+                    aaaa aaa aaaaaaaaa aaa
+                </p>
+            </section>
+            <section>
+                <h3>Inline</h3>
+                <!-- Inline Text Semantics -->
+                <p>
+                    <dfn id="HTML">Hypertext Markup Language</dfn>
+                    (<abbr>HTML</abbr>) is a markup Language.
+                </p>
+                <p>
+                    <dfn id="spec"><abbr title="Specification">Spec</abbr></dfn>
+                    is a markup Language.
+                </p>
+                <p>The array function <code>filter()</code></p>
+                <p>The array function
+                <pre>
+                    <code>filter((each) => {
+                        return each    
+                    })                        
+                    </code></pre> selects
+                </p>
+                <p>Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor <mark>incididunt</mark> ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis <time datetime="2022-08-31">Aug 31</time> nostrud exercitation ullamco
+                    laboris nisi ut <data value="some value">aliquip</data> ex ea commodo consequat.
+                    <q cite="google.com">Duis aute irure dolor</q> in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat <time datetime="20:00">10pm</time> non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Ruby
+                    <ruby>
+                        漢 <rp>(</rp>
+                        <rt>kan</rt>
+                        <rp>)</rp>
+                        字 <rp>(</rp>
+                        <rt>ji</rt>
+                        <rp>)</rp>
+                    </ruby>
+                </p>
+                <p>Sample <br><samp>Keyboard not found <br>Press F1 to continue</samp></p>
+                <div>
+                    <o>Small</o>
+                    <p>MDN Web Docs is a learning platform for Web technologies
+                        and the software that powers the Web.</p>
+                    <hr>
+                    <p><small>The content is licensed under a Creative Commons Attribution-ShareAlike 2.5
+                            Generic License.</small></p>
+                </div>
+                <p>Sub <br>Almost every developer's favorite molecule is
+                    C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+                <div>
+                    <p>Sup + Var</p>
+                    <p>The <em>Pythagorean theorem</em> is often expressed as the following equation:</p>
+                    <p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+                </div>
+                <div id="example-paragraphs">
+                    <p>Fernstraßenbauprivatfinanzierungsgesetz</p>
+                    <p>Fernstraßen<wbr>bau<wbr>privat<wbr>finanzierungs<wbr>gesetz</p>
+                    <p>Fernstraßen&shy;bau&shy;privat&shy;finanzierungs&shy;gesetz</p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <h2>Image and multimedia</h2>
+            <section>
+                <h3>Video + Track</h3>
+                <video controls src="media/friday.mp4">
+                    <!-- Will not work because CORS errors -->
+                    <track default kind="captions" srclang="en" src="media/friday.vtt" />
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+            </section>
+        </article>
+        <article>
+            <h2>Embedded content</h2>
+            <section>
+                <h3>iframe</h3>
+                <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+                </iframe>
+            </section>
+            <section>
+                <h3>object</h3>
+                <object type="application/pdf" data="media/sample.pdf" width="250" height="200">
+                </object>
+            </section>
+        </article>
+        <article>
+            <h2>SVG</h2>
+            <section>
+                <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="grey">
+                    <circle cx="50" cy="50" r="40" />
+                    <circle cx="150" cy="50" r="4" />
+                    <svg viewBox="0 0 10 10" x="200" width="100">
+                        <circle cx="5" cy="5" r="4" />
+                    </svg>
+                </svg>
+            </section>
+        </article>
+        <article>
+            <h2>Forms</h2>
+            <section>
+                <h3>Meter</h3>
+                <label for="fuel">Fuel level:</label>
+                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                    at 50/100
+                </meter>
+            </section>
+            <section>
+                <h3>Progress</h3>
+                <label for="file">File progress:</label>
+                <progress id="file" max="100" value="70"> 70% </progress>
+            </section>
+            <section>
+                <h3>Optgroup</h3>
+                <label for="dino-select">Choose a dinosaur:</label>
+                <select id="dino-select">
+                    <optgroup label="Theropods">
+                        <option>Tyrannosaurus</option>
+                        <option>Velociraptor</option>
+                        <option>Deinonychus</option>
+                    </optgroup>
+                    <optgroup label="Sauropods">
+                        <option>Diplodocus</option>
+                        <option>Saltasaurus</option>
+                        <option>Apatosaurus</option>
+                    </optgroup>
+                </select>
+            </section>
+        </article>
+        <article>
+            <h2>Interactive elements</h2>
+            <section>
+                <h3>Summary and Details</h3>
+                <details>
+                    <summary>Details</summary>
+                    Something small enough to escape casual notice.
+                </details>
+            </section>
         </article>
     </main>
     <footer>
